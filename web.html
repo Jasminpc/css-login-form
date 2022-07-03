@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--css linking-->
+	<link rel="stylesheet"  href="style.css">
+	<!-- jquery cdn link to show/hide-->
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>doc</title>
+</head>
+<body>
+	<div class="container">
+		<div class="form">
+			<div class="btnn">
+				<button class="signupb">SIGN UP</button>
+				<button class="loginb">LOG IN</button>
+			</div>
+		   <form action="" class="signUp">
+		   	<div class="formgroup">
+		   		<input type="text" name="name" id="user name" placeholder="user name" autocomplete="off">
+		   	</div>
+		   	<div class="formgroup">
+		   		<input type="email" name="email" id="email" placeholder="email id" autocomplete="off">
+		   	</div>
+		   	<div class="formgroup">
+		   		<input type="password" name="password" id="password" placeholder="password" autocomplete="off">
+		   	</div>
+		   	<div class="formgroup">
+		   		<input type="password" name="confirm password" id="confirm password" placeholder="Confirm password" autocomplete="off">
+		   	</div>
+		   	<div class="checkBox">
+		   		<input type="checkbox" name="checkbox" id="checkbox">
+		   		<span class="text">I agree with terms&condition</span>
+		   	</div>
+		   	<div class="formgroup">
+		   		<button class="butn">REGISTER</button>
+		   	</div>
+		   </form>	
+
+		   <!--login-->
+        <form action="" class="login">
+		   	
+		   	<div class="formgroup">
+		   		<input type="email" name="email" id="email" placeholder="email id" autocomplete="off">
+		   	</div>
+		   	<div class="formgroup">
+		   		<input type="password" name="password" id="password" placeholder="password" autocomplete="off">
+		   	</div>
+		   	<div class="checkBox">
+		   		<input type="checkbox" name="checkbox" id="checkbox">
+		   		<span class="text">keep me in signed in on this device</span>
+		   	</div>
+		   	<div class="formgroup">
+		   		<button class="butn">LOGIN</button>
+		   	</div>
+		</form>	
+
+		</div>
+	</div>
+	<!--javascript to show/hide form-->
+<script >
+	$(document).ready(function(){
+/*show login*/
+$('.loginb').click(function(){
+	$('.login').show();
+	$('.signUp').hide();
+	$('.loginb').css({'border-bottom':'2px solid #ff4141'});
+});
+/*show signup*/
+$('.signupb').click(function(){
+	$('.login').hide();
+	$('.signUp').show();
+	$('.signupb').css({'border-bottom':'2px solid #ff4141'});
+});
+});
+</script>
+</body>
+</html>
